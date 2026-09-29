@@ -2,6 +2,8 @@
 ## Devlogs
 ### W1
 Write your W1 activity Devlog here.
+1: The camera is no longer tied to the cat object and thus does not follow it around, so the cat still moves but the camera is stuck at its starting position.
+2: https://fayawizard.itch.io/w1
 
 ### W2
 Create future Devlog sub-headers with the three # symbols, then write your Devlogs below them.
