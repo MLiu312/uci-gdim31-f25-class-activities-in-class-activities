@@ -6,7 +6,11 @@ Write your W1 activity Devlog here.
 2: https://fayawizard.itch.io/w1
 
 ### W2
-Create future Devlog sub-headers with the three # symbols, then write your Devlogs below them.
+1. The r, g, b values are floats instead of ints, bools, or strings, because the RGB scale is set from 0 to 1, and thus increments in decimal values, and must be tracked through floats.
+
+2. The _bounce variable is an int instead of a float, bool, or string since bounces will always be a number but never a decimal, and thus can simply be tracked through an integer.
+
+3. Syntax error, it let me know that there was an expected semicolon at the end.
 
 ## Open-Source Assets
 ### W1
