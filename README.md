@@ -12,6 +12,18 @@ Write your W1 activity Devlog here.
 
 3. Syntax error, it let me know that there was an expected semicolon at the end.
 
+### W3
+Table #2
+1. String GetResponse(int choice, int friendshipLevel, bool secret)
+
+2. void SetLightDimness(int sanityLevel)
+
+3. bool DidPlayerHitBeat(float accuracy)
+
+4. The metaphor we came up with is that the components are tacos from Taco Bell™, and classes are the individual taco shells that form a template for the taco from Taco Bell™ itself. The member variables and methods are the ingredients in the taco from Taco Bell™. 
+
+5. The balls became extremely bright because their speed exceeded the average speed threshold, thus multiplying their color values by 1.5.
+
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
