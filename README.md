@@ -24,6 +24,12 @@ Table #2
 
 5. The balls became extremely bright because their speed exceeded the average speed threshold, thus multiplying their color values by 1.5.
 
+###W4
+Table #4
+1. I added RigidBodies to the cat and soccer ball, as both need to move, and an isTrigger to the goal, as it needs to trigger an event when the ball enters.
+
+2. It worked properly the first time.
+
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
