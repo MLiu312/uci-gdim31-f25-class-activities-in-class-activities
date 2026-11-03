@@ -7,6 +7,7 @@ public class CatW5 : MonoBehaviour
     [SerializeField] private float _turnSpeed = 1.0f;
     [SerializeField] private Animator _animator;
 
+
     private string _isWalkingName = "IsWalking";
 
     private void Update()
@@ -51,6 +52,20 @@ public class CatW5 : MonoBehaviour
 
         float rotation = Input.GetAxis("Horizontal") * _turnSpeed * Time.deltaTime;
         transform.Rotate(0, rotation, 0);
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            translation.z = 1;
+        }
+        else if (Input.GetKey(KeyCode.S)) {
+            translation.z = -1;
+        }
+
+        if (_flipWSControls) {
+            translation.z *= -1;
+        }
+
+        transform.Translate(translation * _moveSpeed * Time.deltaTime);
 
         if (translation.magnitude != 0.0f || rotation != 0.0f)
         {
