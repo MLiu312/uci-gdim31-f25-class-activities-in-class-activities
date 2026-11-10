@@ -34,6 +34,7 @@ Table #4
 Henri was my partner for this in-class activity. The Deer class needed two variables, one SerializeField Transform variable called target to track the gameObject the Deer would move towards, and one private NavMeshAgent variable called agent, to get the component. This class would just have two methods, Start() and Update(), both provided by Unity. Start() would get the NavMeshAgent component and assign it to agent, while Update() would continually set the NavMeshAgent's destination towards the target object's position, using the SetDestination() method.
 
 ###W7
+
 Activity 1: I did parts of Unity Engine and Unity Coding. Link: https://docs.google.com/document/d/1C6uCwfuqZOueFMv-xBgh9KSqakfdi0eeqCGhbDev6XM/edit?usp=sharing
 
 Activity 2: Henri was my partner again
