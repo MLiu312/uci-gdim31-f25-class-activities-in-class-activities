@@ -33,6 +33,17 @@ Table #4
 ###W5
 Henri was my partner for this in-class activity. The Deer class needed two variables, one SerializeField Transform variable called target to track the gameObject the Deer would move towards, and one private NavMeshAgent variable called agent, to get the component. This class would just have two methods, Start() and Update(), both provided by Unity. Start() would get the NavMeshAgent component and assign it to agent, while Update() would continually set the NavMeshAgent's destination towards the target object's position, using the SetDestination() method.
 
+###W7
+Activity 1: I did parts of Unity Engine and Unity Coding. Link: https://docs.google.com/document/d/1C6uCwfuqZOueFMv-xBgh9KSqakfdi0eeqCGhbDev6XM/edit?usp=sharing
+
+Activity 2: Henri was my partner again
+
+- What member variables does this class need?  
+This class needs a [SerializeField] private float variable _speed, and then two private variables, one Boolean chasing to track if the bats should chase, and Transform player, to track the player Object.
+
+- What methods does this class need? Should it be something that Unity provides (like Start(), Update(), or a collision method), or one you write?
+This class needs 3 methods, Update() which is provided by Unity, and then two methods we write ourselves, StartChase() and StopChase(). StartChase takes a Transform object and assigns that to the variable player and sets the boolean chasing to true, while StopChase sets the boolean chasing to false. In Update(), it will check if chasing is true, and if so, it will call MoveTowards to send the bat towards the player.
+  
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
