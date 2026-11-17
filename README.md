@@ -46,6 +46,9 @@ This class needs a [SerializeField] private float variable _speed, and then two 
 - What methods does this class need? Should it be something that Unity provides (like Start(), Update(), or a collision method), or one you write?
   
 This class needs 3 methods, Update() which is provided by Unity, and then two methods we write ourselves, StartChase() and StopChase(). StartChase takes a Transform object and assigns that to the variable player and sets the boolean chasing to true, while StopChase sets the boolean chasing to false. In Update(), it will check if chasing is true, and if so, it will call MoveTowards to send the bat towards the player.
+
+### W8
+The code used global vector forward instead of local vector forward, thus not adjusting the muskrat's forward movement towards its current rotation and sending it always towards the global forward.
   
 ## Open-Source Assets
 ### W1
