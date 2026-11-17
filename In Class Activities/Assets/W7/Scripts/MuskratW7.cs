@@ -44,9 +44,10 @@ public class MuskratW7 : MonoBehaviour
         // Transform.RotateAround () https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Transform.RotateAround.html
         //
         // You might want to look below Step 3 for an example :D
-        
+
+        Vector3 rotationAxis = transform.TransformDirection(Vector3.up);
         float leftright = Input.GetAxis("Horizontal");
-        
+        transform.RotateAround(transform.position, rotationAxis, leftright*_rotationSpeed*Time.deltaTime);
 
 
         // STEP 3 -------------------------------------------------------------
@@ -65,7 +66,8 @@ public class MuskratW7 : MonoBehaviour
         //      the Muskrat.
         // The Muskrat should never play the "flying" animation while on a
         //      bubble.
-
+        _animator.SetBool("flying", false);
+        _animator.SetBool("running", Mathf.Abs(forward) > 0);
 
         // STEP 5 -------------------------------------------------------------
     }
@@ -88,7 +90,7 @@ public class MuskratW7 : MonoBehaviour
         float leftright = Input.GetAxis("Horizontal");
 
         // STEP 1 -------------------------------------------------------------
-
+        transform.Rotate(0, leftright*_rotationSpeed*Time.deltaTime, 0);
 
         // STEP 2 -------------------------------------------------------------
         float movement = Input.GetAxis("Vertical");
@@ -96,7 +98,7 @@ public class MuskratW7 : MonoBehaviour
         // This line of code is incorrect. 
         // Replace it with a different line of code that uses 'movement' to
         //      move the Muskrat forwards and backwards.
-        transform.position += movement * Vector3.forward * _moveSpeed * Time.deltaTime;
+        transform.position += movement * transform.forward * _moveSpeed * Time.deltaTime;
 
         // STEP 2 -------------------------------------------------------------
 
@@ -107,8 +109,9 @@ public class MuskratW7 : MonoBehaviour
         // Use _rigidbody.linearVelocity.
         // You may also find the absolute value method, Mathf.Abs(), helpful:
         //      https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Mathf.Abs.html
+        _animator.SetBool("flying", Mathf.Abs(_rigidbody.linearVelocity.y) > 0);
+        _animator.SetBool("running", Mathf.Abs(movement) > 0);
 
-        
         // STEP 4 -------------------------------------------------------------
     }
 
